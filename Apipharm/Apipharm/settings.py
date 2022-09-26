@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zzr74bqt&&ib@0d^%$wxxu$6x!a1$iqx-nq@4lyd-%h_6=btjd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,18 +74,24 @@ WSGI_APPLICATION = 'Apipharm.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
+
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
-    }
+
+        'NAME': 'railway',
+
+        'USER': 'postgres',
+
+        'PASSWORD': '12zUN0D96vnL76TvGKmY',
+
+        'HOST': 'containers-us-west-56.railway.app',
+
+        'PORT': '5855',
+
 }
 
-
-
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
